@@ -32,14 +32,14 @@ def build():
     config = {'candidateCount': 1, 'maxOutputTokens': 8192, 'thinkingConfig': {'thinkingLevel': 'MINIMAL', 'includeThoughts': False}}
     protocol = {
         'author': 'Sharthok Rayan Pal', 'preparation_date': '2026-10-12', 'version': '1.0.0',
-        'model': 'gemini-3-flash-preview', 'endpoint': 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent',
+        'model': 'gemini-3.6-flash', 'endpoint': 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent',
         'generationConfig': config, 'cells': cells, 'primary': 'NSTOP = V0 + V2',
         'phases': {'pilot': {'n_per_cell': 5, 'seed': 'rayan-pal-gemini3-crossscript-pilot-2026-10-12', 'inference': 'descriptive only'}, 'confirmatory': {'n_per_cell': 200, 'seed': 'rayan-pal-gemini3-crossscript-confirmatory-2026-10-12', 'inference': 'analysis_plan.md'}},
         'schedule_algorithm': 'Sort by SHA256(UTF8(seed + | + cell + | + decimal repetition)); ties by cell and repetition. Saved schedules authoritative.',
         'concurrency': 1, 'automatic_retries': 0, 'timeout_seconds': 600,
         'omitted': ['temperature','topP','topK','seed','stopSequences','tools','toolConfig','safetySettings','responseSchema','responseMimeType','cachedContent'],
         'normalization': 'none', 'stop_policy': 'Stop on ERROR, MODEL_UNAVAILABLE, missing/different returned modelVersion within a phase, or integrity failure. Preserve all earlier outcomes; no retries/resume.',
-        'model_identity': 'Requested preview alias is not immutable weights. Require nonempty modelVersion; report all versions and stop if it changes within phase. No claims of matching March weights.',
+        'model_identity': 'The requested model identifier is not a cryptographic weight pin. Require nonempty modelVersion; report all versions and stop if it changes within phase. No claims of matching March weights.',
         'exclusions': 'SAFETY, REFUSAL and TOOL retained in denominator as non-NSTOP; ERROR prevents confirmation.',
         'live_authorization': 'Separate phase-specific operator authorization, published frozen commit/tag, and verified zero-cost project required; never inferred from this freeze.'
     }

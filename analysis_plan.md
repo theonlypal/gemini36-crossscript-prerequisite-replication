@@ -26,7 +26,8 @@ absence. Safety/refusal/tool outcomes are non-NSTOP, not operational errors.
 
 Historical source code labels binary counts V0; the wrapper supplies NSTOP
 counts and relabels its analysis output accordingly. No historical results
-are copied into this experiment. The preview model name is not an immutable
+are copied into this experiment. The model name is not an immutable
 checkpoint; returned modelVersion is preserved and must remain constant within
-each phase. Public preregistration and zero-cost project confirmation precede
-any future live execution.
+each phase. Public preregistration and separate phase-specific authorization
+precede any future live execution. Paid pilot execution additionally requires
+the explicit budget authorization specified in billing_amendment.json.

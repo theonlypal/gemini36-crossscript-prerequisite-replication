@@ -24,6 +24,8 @@ def authorize(phase, authorization, live, zero_cost):
         raise PermissionError('Authorization does not match phase/freeze/no-spend gates')
     if not (zero_cost and a.get('zero_cost_project_verified') is True):
         amendment=read(ROOT/'billing_amendment.json')
+        if datetime.datetime.now(datetime.timezone.utc).date().isoformat()>amendment['pricing_valid_through']:
+            raise PermissionError('Frozen billing rates expired; refreeze rates before inference')
         if phase!='pilot' or a.get('authorize_paid') is not True or a.get('budget_usd')!=amendment['pilot_budget_usd'] or a.get('billing_amendment_sha256')!=sha((ROOT/'billing_amendment.json').read_bytes()):
             raise PermissionError('Paid pilot requires exact amended budget authorization')
     if not isinstance(a.get('public_commit_url'),str) or not a['public_commit_url'].startswith('https://github.com/') or not a['public_commit_url'].endswith('/commit/'+head):
@@ -41,7 +43,7 @@ def transmit(body, key, timeout):
     raw=b''
     transport_error=None
     try:
-        conn.request('POST','/v1beta/models/gemini-3-flash-preview:generateContent',body=body,headers={'Content-Type':'application/json','x-goog-api-key':key,'Accept-Encoding':'identity'})
+        conn.request('POST','/v1beta/models/gemini-3.6-flash:generateContent',body=body,headers={'Content-Type':'application/json','x-goog-api-key':key,'Accept-Encoding':'identity'})
         response=conn.getresponse()
         status=response.status
         headers=response.getheaders()
@@ -82,7 +84,7 @@ def execute(phase, authorization, live=False, zero_cost=False, key_file=None, ou
         body=request_bytes(row['cell'])
         if auth.get('authorize_paid'):
             # Conservative input allowance; all generated thinking is charged.
-            reserve=(len(body)+1024)*0.50/1e6+protocol['generationConfig']['maxOutputTokens']*3.00/1e6
+            reserve=(len(body)+1024)*0.75/1e6+protocol['generationConfig']['maxOutputTokens']*3.75/1e6
             if spent_usd+reserve>auth['budget_usd']:
                 save(dest/'STOPPED.json',{'reason':'BUDGET_RESERVE','slot_id':row['slot_id'],'last_event_sha256':previous,'decision':'INCONCLUSIVE','estimated_cost_usd':spent_usd})
                 return
@@ -103,7 +105,7 @@ def execute(phase, authorization, live=False, zero_cost=False, key_file=None, ou
             if not all(isinstance(n,int) and n>=0 for n in counts):
                 save(dest/'STOPPED.json',{'reason':'MISSING_BILLING_USAGE','slot_id':row['slot_id'],'last_event_sha256':previous,'decision':'INCONCLUSIVE'})
                 return
-            spent_usd+=(counts[0]*0.50+(counts[1]+counts[2])*3.00)/1e6
+            spent_usd+=(counts[0]*0.75+(counts[1]+counts[2])*3.75)/1e6
             save(dest/'cost.json',{'estimated_cost_usd':spent_usd,'budget_usd':auth['budget_usd'],'tax_excluded':True})
         print(row['slot_id'],row['cell'],status,classification['class'],flush=True)
         mv=classification['modelVersion']

@@ -1,9 +1,17 @@
-# Gemini 3 Flash: Cross-Script Prerequisite Replication
+# Gemini 3.6 Flash: Cross-Script Prerequisite Replication
 
 Rayan Pal · October 12, 2026
 
 Preregistered tests of rule removal and prerequisite reassignment on
-`gemini-3-flash-preview`. **Status: preregistered; no experimental results.**
+`gemini-3.6-flash`. **Status: preregistered; no experimental results.**
+
+Model-only adaptation of the [Gemini 3 Flash protocol at
+8edc9a0](https://github.com/theonlypal/gemini3-crossscript-prerequisite-replication/tree/8edc9a07d2ab7a89eceb7fdd5fe23dbc06d7840f).
+The request bodies, prompts, schedules, rendering targets, classifications and
+statistical procedures are byte-identical. The model identifier and endpoint
+change; billing rates and repository metadata are updated. This preregistration
+was prepared after inspecting the earlier model's 40-request pilot, but before
+any Gemini 3.6 requests. No prior results are included in the new population.
 
 ## Exact prompts
 
@@ -46,8 +54,8 @@ confirmatory results.
 ## API configuration
 
 ```text
-Model: gemini-3-flash-preview
-POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent
+Model: gemini-3.6-flash
+POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent
 candidateCount: 1
 maxOutputTokens: 8192
 thinkingLevel: MINIMAL
@@ -59,7 +67,7 @@ Concurrency: 1
 
 Temperature, top-p, top-k, seed, stop sequences, tools, response schemas, grounding
 and custom safety settings are omitted. MINIMAL does not guarantee zero reasoning.
-The preview identifier does not pin immutable weights. Returned `modelVersion`
+The model identifier does not pin immutable weights. Returned `modelVersion`
 is recorded; missing or changing versions stop the phase. No model substitution.
 
 [Protocol](protocol.json) · [Serialized requests](requests) ·

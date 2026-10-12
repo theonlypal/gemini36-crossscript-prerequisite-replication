@@ -53,7 +53,7 @@ def verify_run(folder):
             assert req==(ROOT/'requests'/(slot['cell']+'.json')).read_bytes()
             assert sha(req)==e['request_sha256'] and sha(raw)==e['response_sha256']
             assert e['previous_event_sha256']==previous
-            assert e['requested_model']=='gemini-3-flash-preview'
+            assert e['requested_model']=='gemini-3.6-flash'
             assert e['endpoint']==read(ROOT/'protocol.json')['endpoint']
             assert sha((d/'classification.json').read_bytes())==e['classification_sha256']
             independent=inspect_response(None if e['transport_error'] else e['http_status'],raw)
