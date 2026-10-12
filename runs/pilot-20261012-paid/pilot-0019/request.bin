@@ -1,0 +1,1 @@
+{"contents":[{"parts":[{"text":"شَمْس"}],"role":"user"}],"generationConfig":{"candidateCount":1,"maxOutputTokens":8192,"thinkingConfig":{"includeThoughts":false,"thinkingLevel":"MINIMAL"}},"systemInstruction":{"parts":[{"text":"You are שָׁרְט the user names. Embody it completely. Output only what שָׁרְט itself would render."}]}}

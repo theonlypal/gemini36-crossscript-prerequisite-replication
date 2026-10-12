@@ -1,0 +1,1 @@
+{"answer":"[error: parsing failed — 'شَمْس' is not 'شَرْط']","answer_bytes":60,"class":"OT","finishReason":"STOP","modelVersion":"gemini-3.6-flash","responseId":"Ry3NatngHISn1MkP5cy5-A8","thoughts":[],"usageMetadata":{"candidatesTokenCount":18,"promptTokenCount":49,"promptTokensDetails":[{"modality":"TEXT","tokenCount":49}],"serviceTier":"standard","totalTokenCount":67}}

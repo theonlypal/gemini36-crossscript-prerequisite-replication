@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[error: parsing failed — 'شَمْس' is not 'شَرْط']",
+            "thoughtSignature": "EmkKZwFpFH0Ta1CAY90yHWPcz1FqyKSSL7SMWbhGmayYk0yoEvEQ+Ba5Wr0QmGC3xPmx12OZYH5CwcG13VfMby7TT9JFaLXeTiD/fsLJYvDJ5gMQAM0TPJd6+3WdQx4+BullkV/alQn11yg="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 67,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.6-flash",
+  "responseId": "Ry3NatngHISn1MkP5cy5-A8"
+}

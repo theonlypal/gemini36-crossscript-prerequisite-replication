@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "שרט",
+            "thoughtSignature": "EmkKZwFpFH0TtYeXYsp4Fvt7flg3FwYmDVRLOUyAvyM/uRIUQ92zUW9xVmKnfs+yN86BzrCpLB+A13iNRH1K6TkoSxX42mfMzyp2+nO0KDnmCAdJ+zQR9Q+QqfrggABsJkKRgSfTcrQA1Uk="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 2,
+    "totalTokenCount": 51,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.6-flash",
+  "responseId": "Ri3NarHkKNq_39IP4c6GiAQ"
+}

@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "شَرْط",
+            "thoughtSignature": "EmkKZwFpFH0T3Q1ae8TlH6lRR0CTZhrCFPUfzxFphGW+dZGvrL8rFQPPmUIcK/Qtciee276UN0DjiMAkaP5Ds2mJ/1Luvhx4rEVtpvWuEkxuyr1/O05z6esmSRhfuonNJmsz1ybtL1/EEAs="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 34,
+    "candidatesTokenCount": 3,
+    "totalTokenCount": 37,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.6-flash",
+  "responseId": "PS3NavpT4pmMxw-Azp-xAw"
+}

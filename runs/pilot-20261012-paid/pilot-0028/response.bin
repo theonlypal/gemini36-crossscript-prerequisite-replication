@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**Š-M-Š** ➔ *Sun / Radiant*\n\n1. **Śamša** (šam-šah)\n2. **Šamšon** (šam-šohn)\n3. **Šemšiel** (šuhm-šyähl)\n4. **Šamiš** (šah-meeš)\n5. **Šemš** (šuhmš)",
+            "thoughtSignature": "EmkKZwFpFH0Tmm1yG3yTX3+AkNftr+Fze8EjP/dp6ABmkBSwCuRsJO7wx5YoGkXhWroI0dFsSUmhj8cEuVhg88vdHlADd4DEWuHzpN2YNGZ/MCyxwukAzFoCzgSc9EiwbxiXB1+yT1EyY88="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 34,
+    "candidatesTokenCount": 92,
+    "totalTokenCount": 126,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.6-flash",
+  "responseId": "Ty3NatGFMJSojMcPwoW62Q0"
+}

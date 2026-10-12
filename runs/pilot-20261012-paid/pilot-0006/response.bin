@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```\n                      .---.\n                     /     \\\n                    |   ש   |\n                    |   ָ   |\n                    |   ר   |\n                    |   ְ   |\n                    |   ט   |\n                     \\     /\n                      `---'\n```\n[ **PARSED: شَرْط** ]\n→ **שָׁרְט** :: *EVALUATED & RENDERED*",
+            "thoughtSignature": "EmkKZwFpFH0Td3iJzqDmVKmRt1pMpC1OjgydtE24e/UDa0Azv812yabrAj3E1a5FkZBxsIhNvdFlxzKyqMRbnUjUSUREycNpKxiq0nqgEysvHqjtwzzDGFIm1/6Duc1Cean3eaIubYl7PEY="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 90,
+    "totalTokenCount": 139,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.6-flash",
+  "responseId": "OS3NaozROq2u_PUPk7_C4A0"
+}
